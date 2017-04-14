@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Integer limit=2;
+        int i=0;
+        while(i<3){
+        String []printinfo=info(i);
+        i++;
+        
+        if(i-1==limit){
+            break;
+        }
+        
+        System.out.println(printinfo[1]);
+        System.out.println(printinfo[2]);
+        if(printinfo[3]==(null)){
+        continue;
+        }
+        System.out.println(printinfo[3]);
+      }
+        
+    }
+    
+    public static String [] info(int x){
+        String[]info=new String[]{"0","hatiman","0808","chiba city"};
+        String[]info2=new String[]{"1","yukinon","0103",null};
+        String[]info3=new String[]{"2","yuigahama","0619","chiba city"};
+        if(x==0){
+            return info;
+        }
+        else if(x==1){
+            return info2;
+        }
+        else if(x==2){
+            return info3;
+        }
+        else{
+            return null;
+        }
+   }
+}
